@@ -1,0 +1,51 @@
+@use "../mixins/media" as *
+
+.about
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  gap: 123px
+
+  @include lg
+    flex-direction: column
+    gap: 24px
+
+.avatar-wrapper
+
+  @include lg
+    text-align: center
+
+  @include md
+    max-width: 495px
+    margin: auto
+
+  img  
+    @include md
+      width: 100%
+      
+.about-content
+
+  .header
+    text-align: left
+
+    @include lg
+      margin-bottom: 16px
+
+  .about-description
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    gap: 20px
+    font-size: 16px
+    line-height: 26px
+    color: rgb(var(--dark))
+
+    @include sm
+      font-size: 15px

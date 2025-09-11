@@ -1,0 +1,60 @@
+@use "../mixins/media" as *
+@use "../mixins/gap" as *
+
+.hero
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+  @include lg
+    flex-direction: column-reverse
+
+.hero-content
+  position: absolute
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: end
+  height: 100%
+  @include gap(48px, 24px, 16px)
+
+  @include xl
+    position: static
+
+  .social-links
+    @include gap(48px, 24px, 16px)  
+
+
+.hero-description
+  max-width: 701px
+  font-size: 24px
+  font-weight: 400
+  color: rgba(var(--dark), 0.6)
+
+  @include xl
+    font-size: 20px
+
+  @include lg
+    max-width: 100%
+
+  @include sm
+    font-size: 16px
+
+.hero-image
+  margin-left: auto
+
+  @include lg
+    margin: 0 0 24px
+
+  img
+    width: 100%
+    height: 100%
+    -o-object-fit: cover
+    object-fit: cover

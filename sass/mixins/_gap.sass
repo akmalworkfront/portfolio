@@ -1,0 +1,10 @@
+@use "./media" as *
+
+@mixin gap($desktop, $tablet, $mobile)
+  gap: $desktop
+
+  @include lg
+    gap: $tablet
+
+  @include sm
+    gap: $mobile

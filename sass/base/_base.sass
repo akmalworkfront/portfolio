@@ -1,0 +1,90 @@
+@use "../mixins/media" as *
+@use "../mixins/gap" as *
+
+body
+  background-color: rgb(var(--light))
+
+section
+  margin: 100px 0
+
+  @include lg
+    margin: 48px 0
+
+  @include sm
+    margin: 32px 0
+
+  &.dark-bg
+    background-color: #000
+    @media (prefers-color-scheme: dark)
+      background-color: rgba(var(--dark), 0.6 )
+
+.container
+  max-width: 1280px
+  margin: 0 auto
+  padding: 0 32px
+
+  @include sm
+    padding: 0 20px
+
+.dark-bg
+  padding-top: 100px
+  padding-bottom: 100px
+
+  @include lg
+    padding-top: 48px
+    padding-bottom: 48px
+
+  @include sm
+    padding-top: 32px
+    padding-bottom: 32px
+
+  .header
+    color: #fff
+
+  &--modified
+    .header
+      @media (prefers-color-scheme: dark)
+        color: #000
+
+.social-links
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+  .social-icon
+    width: 64px
+    height: 64px
+    font-size: 24px
+    transition: all .3s
+    border-radius: 10px
+    border: 1px solid rgb(var(--dark))
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    font-size: 35px
+    color: rgb(var(--dark))
+
+    @include sm
+      width: 48px
+      height: 48px
+      font-size: 23px
+      border-radius: 8px
+
+    @media (hover: hover)
+      &:hover
+        background-color: rgb(var(--dark))
+        color: rgb(var(--light))
+        
+    @media (hover: none)
+      &:hover
+        background-color: rgb(var(--dark))
+        color: rgb(var(--light))
+.btn
+  color: rgb(var(--light))
+  padding: 16px 20px
+  background-color: rgb(var(--dark))
+  border-radius: 8px
+
+  i
+    margin-left: 12px

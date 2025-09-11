@@ -1,0 +1,77 @@
+@use "../mixins/media" as *
+
+.experience-container
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  gap: 20px
+
+.experience-card
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  gap: 16px
+  padding: 24px 16px
+  border-radius: 8px
+  border: 1px solid #fff
+  transition: all .3s
+
+  @include sm
+    gap: 12px
+
+
+  @media (hover: hover)
+    &:hover
+      background-color: #242424
+      border-color: #242424
+      
+  @media (hover: none)  
+    &:hover
+      background-color: #242424
+      border-color: #242424
+
+  .header-wrapper
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    gap: 24px
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
+    @include sm
+      gap: 16px
+
+  .card-header
+    font-size: 30px
+    color: #fff
+
+    @include md
+      font-size: 24px
+
+    @include sm
+      font-size: 18px
+
+  .card-description
+    font-size: 18px
+    color: rgba(255, 255, 255, 0.6)
+
+    @include sm
+      font-size: 15px
+
+  .experience-icon
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    min-width: 32px
+    height: 32px
+    border-radius: 50%
+    background-color: #fff

@@ -1,0 +1,59 @@
+@use "../mixins/media" as *
+
+.skills-container
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  gap: 20px
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+  @include lg
+    max-width: 598px
+    margin: 0 auto
+
+.skill-card
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  height: 180px
+  width: 186px
+  padding: 16px
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  gap: 16px
+  border-radius: 8px
+  border: 1px solid rgb(var(--dark))
+  transition: all .3s
+  color: rgb(var(--dark))
+
+  @include xs
+    height: 150px
+    width: 150px
+
+  i
+    font-size: 48px
+  p
+    font-size: 18px
+    font-weight: 800
+
+  @media (hover: hover)
+    &:hover
+      background-color: rgb(var(--dark))
+      color: rgb(var(--light))
+
+  @media (hover: none)
+    &:hover
+      background-color: rgb(var(--dark))
+      color: rgb(var(--light))

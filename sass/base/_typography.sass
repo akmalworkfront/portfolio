@@ -1,0 +1,60 @@
+@use "../mixins/media" as *
+
+@font-face
+  font-family: "Open Sans"
+  font-style: normal
+  font-weight: 100 900
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2")
+  font-display: swap
+
+@font-face
+  font-family: "Open Sans"
+  font-style: italic
+  font-weight: 100 900
+  src: url("../fonts/OpenSans-Italic-VariableFont_wdth,wght.woff2") format("woff2")
+  font-display: swap
+
+html,
+body
+  font-family: "Open Sans", sans-serif
+  font-size: 14px
+  line-height: 1.5
+
+h1
+  font-size: 48px
+  font-family: "Open Sans"
+  color: rgb(var(--dark))
+
+  @include xl
+    font-size: 40px
+
+  @include lg
+    font-size: 48px
+
+  @include sm
+    font-size: 36px
+
+  @include xs
+    font-size: 30px
+
+.normal
+  font-weight: 400
+
+.header
+  font-size: 48px
+  text-align: center
+  margin-bottom: 32px
+  color: rgb(var(--dark))
+
+  @include lg
+    margin-bottom: 24px
+
+  @include sm
+    font-size: 36px
+
+a,
+a:visited
+  text-decoration: none
+
+a:hover
+  text-decoration: none
