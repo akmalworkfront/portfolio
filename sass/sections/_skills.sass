@@ -51,12 +51,14 @@
     font-size: 18px
     font-weight: 800
 
-  @media (hover: hover)
+  @media (hover: hover) and (pointer: fine)
     &:hover
       background-color: rgb(var(--dark))
       color: rgb(var(--light))
-
-  @media (hover: none)
+    
+  
+  @media (hover: none) and (pointer: coarse)
     &:active
       background-color: rgb(var(--dark))
       color: rgb(var(--light))
+    
