@@ -418,7 +418,7 @@ a:hover {
   }
 }
 @media (hover: none) {
-  .skill-card:hover {
+  .skill-card:active {
     background-color: rgb(var(--dark));
     color: rgb(var(--light));
   }
