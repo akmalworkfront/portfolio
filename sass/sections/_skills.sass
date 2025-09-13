@@ -11,9 +11,12 @@
   -ms-flex-wrap: wrap
   flex-wrap: wrap
 
+  @include xl
+    max-width: 805px
+    margin: 0 auto
+
   @include lg
     max-width: 598px
-    margin: 0 auto
 
 .skill-card
   display: -webkit-box
@@ -38,7 +41,7 @@
   transition: all .3s
   color: rgb(var(--dark))
 
-  @include xs
+  @include sm
     height: 150px
     width: 150px
 

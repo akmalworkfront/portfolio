@@ -372,10 +372,15 @@ a:hover {
   gap: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 1280px) {
+  .skills-container {
+    max-width: 805px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 960px) {
   .skills-container {
     max-width: 598px;
-    margin: 0 auto;
   }
 }
 
@@ -393,7 +398,7 @@ a:hover {
   transition: all 0.3s;
   color: rgb(var(--dark));
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .skill-card {
     height: 150px;
     width: 150px;
